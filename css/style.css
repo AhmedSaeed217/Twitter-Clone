@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    padding: 10px 0px 10px 13%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: fixed;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+.nav-links a {
+    font-size: 2rem;
+    padding: 8px 25px 8px 8px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+}
+
+.nav-links a:not(:first-child):hover,
+.account-area a:hover {
+    background-color: rgb(47, 51, 54);
+    border-radius: 800px;
+    -webkit-border-radius: 800px;
+    -moz-border-radius: 800px;
+    -ms-border-radius: 800px;
+    -o-border-radius: 800px;
+}
+
+.nav-links a i {
+    font-size: 3rem;
+    margin-right: 15px;
+
+}
+
+.tweet-btn {
+    width: 90%;
+    height: 50px;
+    background-color: #1DA1F2;
+    width: 200px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+    transition: 0.3 ease;
+    -webkit-transition: 0.3 ease;
+    -moz-transition: 0.3 ease;
+    -ms-transition: 0.3 ease;
+    -o-transition: 0.3 ease;
+}
+
+.tweet-btn:hover {
+    background-color: rgba(29, 155, 240, 0.9);
+}
+
+.account-area {
+    width: 100%;
+    height: 30%;
+    padding-top: 185px;
+}
+
+.account-area a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px 8px 15px;
+    margin-right: 10px;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+}
+
+.account-area img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: white;
+}
+
+.account-area .account-details {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    font-size: 1.5rem;
+    line-height: 20px;
+}
+
+.account-name {
+    font-weight: 600;
+}
+
+.account-user {
+    color: rgb(110, 118, 125);
+}
+
+
+main {
+    width: 70%;
+    height: 100%;
+    margin-left: 30%;
+
+}
+
+
+.main-content {
+    display: flex;
+    width: 100%;
+}
+
+.left-feed {
+    width: 50%;
+    border-left: 1px solid rgb(47, 51, 54);
+    border-right: 1px solid rgb(47, 51, 54);
+}
+
+.left-feed-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 55px;
+    padding: 0px 15px;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+.tweet-area {
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-area img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    /* margin-right: 15px; */
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.tweet-content {
+    width: 100%;
+    padding-top: 5px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tweet-content input {
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.tweet-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+
+.tweet-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.tweet-content ul li {
+    margin-right: 12px;
+    color: #1DA1F2;
+    cursor: pointer;
+}
+
+.tweet-area .tweet-btn {
+    width: 75px;
+    height: 35px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.left-feed .tweet-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgb(47, 51, 54);
+    min-height: 100px;
+    cursor: pointer;
+}
+
+.tweet-box .tweet-img img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.tweet-content .profile-name {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.tweet-content .profile-user {
+    color: rgb(110, 118, 125);
+    font-size: 1.6rem;
+    margin-left: 3px;
+    font-weight: 400;
+}
+
+.tweet-content p {
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.tweet-box i {
+    color: rgb(110, 118, 125);
+    cursor: pointer;
+}
+
+.tweet-settings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-right: 50px;
+}
+
+.tweet-settings i {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.right-feed {
+    width: 50%;
+    padding: 0 2%;
+}
+
+.right-feed .search {
+    display: flex;
+    padding-top: 5px;
+    background-color: black;
+    height: 55px;
+    max-width: 355px;
+    position: sticky;
+    top: 0;
+}
+
+.right-feed .search input {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    padding: 5px 30px;
+    background-color: #212327;
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+}
+
+.right-feed .trending {
+    margin-top: 15px;
+    background-color: #212327;
+    height: 580px;
+    max-width: 355px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 15px 15px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.trending-item {
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+    padding: 0 15px;
+    color: rgb(110, 118, 125);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.trending-item:hover,
+.show-more:hover,
+.sugesstion-profile:hover {
+    background-color: #1c1e22;
+}
+
+.trending-item .item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-content .trend-location,
+.trending-item .trend-num {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.trending-item .trend-name {
+    color: white;
+}
+
+.show-more {
+    padding: 15px;
+    color: #1c88d2;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0 0 15px 15px;
+    -webkit-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 15px 15px;
+    -ms-border-radius: 0 0 15px 15px;
+    -o-border-radius: 0 0 15px 15px;
+}
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    max-width: 355px;
+    height: 250px;
+    margin-top: 15px;
+    background-color: #212327;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.sugesstion-profile {
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    margin-top: 5px;
+}
+
+.sugesstion-profile .follow-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sugesstion-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+.profile-details a {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.profile-details a:hover {
+    text-decoration: underline;
+}
+
+.profile-details span {
+    color: rgb(110, 118, 125);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.profile-details .follows {
+    font-weight: 300;
+    font-size: 1.35rem;
+    background-color: #1c1e22;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: 2px 4px;
+}
+
+
+.sugesstion-profile .tweet-btn {
+    width: 75px;
+    height: 35px;
+    margin: 0 0 0 10px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.follow .show-more {
+    padding: 10px 15px;
+}
+
+
+@media screen and (max-width:1260px) {
+    header {
+        width: 10%;
+        padding: 10px 0;
+    }
+
+    main {
+        margin-left: 10%;
+    }
+
+    header span {
+        display: none;
+    }
+
+    header .tweet-btn {
+        width: 55px;
+        border: 50%;
+        font-size: 1.4rem;
+    }
+
+    header .account-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .account-area i {
+        display: none;
+    }
+
+    header .account-details {
+        display: none;
+    }
+
+    .nav-links {
+        align-items: center;
+    }
+
+    .nav-links a i {
+        margin-right: 0;
+    }
+
+    .nav-links a,
+    .account-area a {
+        padding: 10px;
+    }
+}
